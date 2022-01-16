@@ -77,7 +77,7 @@ export default function Authentication(props: IProps) {
     handleSubmit,
     formState: { errors },
   } = useForm<IAuthetication>();
-  // const history = useHistory();
+ 
   const [isLoading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>("");
 
