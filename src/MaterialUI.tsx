@@ -1,6 +1,6 @@
-import { AppBar, Button, Card, CardContent, CardMedia, CircularProgress, Fab, makeStyles, styled, TextField,Typography } from "@material-ui/core";
-import "./App.css"
-import SearchIcon from "@material-ui/icons/Search"
+import { AppBar, Button, Card, CardContent, CardMedia, CircularProgress, Fab, makeStyles, TextField, Typography } from "@material-ui/core";
+import SearchIcon from "@material-ui/icons/Search";
+import "./App.css";
 
 const useStyles = makeStyles({
     root: {

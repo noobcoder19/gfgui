@@ -4,7 +4,7 @@ import { AppState } from "./AppState";
 import { IStatusizedUser } from "./UsersReducer";
 export default function ReduxBasics() {
     const dispatch = useDispatch();
-    const statusizedUser: IStatusizedUser = useSelector((state: AppState) => state.UsersReducer);
+    // const statusizedUser: IStatusizedUser = useSelector((state: AppState) => state.UsersReducer);
     useEffect(() => {
         async function api() {
             const response = await fetch("https://reqres.in/api/users");
@@ -13,7 +13,7 @@ export default function ReduxBasics() {
         }
         dispatch({type: "started"});
         api();
-    },[])
+    },[dispatch])
 
     return <div>Redux Basics</div>
 }

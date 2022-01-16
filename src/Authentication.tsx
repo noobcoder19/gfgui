@@ -2,7 +2,7 @@ import {
   makeStyles,
   TextField,
   Theme,
-  Typography,
+  Typography
 } from "@material-ui/core";
 // import { data } from "cypress/types/jquery";
 import { useState } from "react";

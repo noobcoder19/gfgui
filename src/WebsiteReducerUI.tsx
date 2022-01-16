@@ -18,7 +18,7 @@ export default function WebsiteReducerUI() {
         }
         dispatch({type: "WebsiteStarted"});
         api();
-    },[]);
+    },[dispatch]);
 
     return(
         <>

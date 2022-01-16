@@ -1,12 +1,12 @@
-import { AppBar, Button, Container, Grid, InputBase, Theme, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Button, Container, Grid, InputBase, Theme } from "@material-ui/core";
+import SearchIcon from "@material-ui/icons/Search";
+import { makeStyles } from "@material-ui/styles";
 import { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { AppState } from "./AppState";
 import HotelCard from "./HotelCard";
-import { completed, started, IHotel } from "./HotelsSlice";
-import SearchIcon from "@material-ui/icons/Search"
-import { makeStyles } from "@material-ui/styles";
-import { useHistory } from "react-router-dom";
+import { completed, IHotel, started } from "./HotelsSlice";
 import { userContext } from "./UserProvider";
 
 
@@ -60,7 +60,7 @@ export default function HotelsUI() {
         dispatch(started());
         api();
 
-    },[]);
+    },[dispatch]);
 
     return (
         <>

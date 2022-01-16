@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import { Redirect, Route } from 'react-router';
 import './App.css';
 import ComponentA from './ComponentA';
-import {Redirect, Route} from 'react-router';
 import ComponentB from './ComponentB';
 import ComponentC from './ComponentC';
-import MainClass from './MainClass';
-import UsersClass from './UsersClass';
-import Hooks from './Hooks';
-import FuncProps from './FuncProps';
 import ComponenentDidUpdate from './ComponentdidUpdate';
-import ReduxBasics from './ReduxBasics';
-import WebsiteReducerUI from './WebsiteReducerUI';
-import UsersSlice from './UsersSlice';
-import SliceUI from './SliceUI';
-import HotelsUI from './HotelsUI';
+import FuncProps from './FuncProps';
+import Hooks from './Hooks';
 import HooksUI from './HooksUI';
+import HotelsUI from './HotelsUI';
 import Login from './Login';
-import SignUp from './SignUp';
+import MainClass from './MainClass';
 import MaterialUI from './MaterialUI';
 import Profile from './Profile';
+import ReduxBasics from './ReduxBasics';
+import SignUp from './SignUp';
+import SliceUI from './SliceUI';
+import UsersClass from './UsersClass';
+import WebsiteReducerUI from './WebsiteReducerUI';
 function App() {
   return (
    <switch>
