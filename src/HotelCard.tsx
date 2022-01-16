@@ -1,4 +1,4 @@
-import { Card, CardContent, CardMedia, makeStyles, styled, Theme, Typography } from "@material-ui/core";
+import { Card, CardContent, CardMedia, makeStyles, Theme, Typography } from "@material-ui/core";
 import { IHotel } from "./HotelsSlice";
 
 
