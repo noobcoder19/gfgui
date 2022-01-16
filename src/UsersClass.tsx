@@ -35,7 +35,7 @@ export default class UsersClass extends React.Component<{}, IState> {
         }
         return (
             <>
-            <img src={this.state.users[0].avatar} alt="image" />
+            <img src={this.state.users[0].avatar} alt={this.state.users[0].first_name} />
             <div> {this.state.users[0].email}</div>
             </>
         );

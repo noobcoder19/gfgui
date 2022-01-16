@@ -1,7 +1,6 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { AppState } from "./AppState";
-import { completed, IUser, started } from "./UsersSlice";
+import { useDispatch } from "react-redux";
+import { completed, started } from "./UsersSlice";
 export default function SliceUI() {
     const dispatch = useDispatch();
     // const users: IUser[] = useSelector((state: AppState) => state.UsersSlice);

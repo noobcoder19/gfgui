@@ -1,7 +1,5 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { AppState } from "./AppState";
-import { IStatusizedUser } from "./UsersReducer";
+import { useDispatch } from "react-redux";
 export default function ReduxBasics() {
     const dispatch = useDispatch();
     // const statusizedUser: IStatusizedUser = useSelector((state: AppState) => state.UsersReducer);
