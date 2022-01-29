@@ -7,6 +7,7 @@ import {
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
+
 import "./App.css";
 import FormButtons, { IButtonItem } from "./FormButtons";
 import LoadingSpinner from "./LoadingSpinner";
@@ -85,6 +86,7 @@ export default function Authentication(props: IProps) {
     try {
       setLoading(true);
       await props.onSubmit(data);
+      reset();
       history.push("/");
       setLoading(false);
     } catch (e: any) {
@@ -93,6 +95,7 @@ export default function Authentication(props: IProps) {
     }
   };
   return (
+    <>
     <div className={styles.outerDiv}>
       <div className={styles.innerDiv}>
         <Typography variant="h3" className={styles.title}>
@@ -162,5 +165,6 @@ export default function Authentication(props: IProps) {
         {isLoading && <LoadingSpinner />}
       </div>
     </div>
+    </>
   );
 }
