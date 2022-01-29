@@ -71,7 +71,7 @@ export default function HotelsUI() {
         }
         dispatch(started());
         api();
-      }, []);
+      }, [dispatch]);
     
 
     return (
