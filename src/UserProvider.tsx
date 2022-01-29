@@ -13,7 +13,7 @@ export default function UserProvider(props: IProps) {
     const [isLoading, setLoading] = useState<boolean>(true);
     useEffect(() => {
         firebase.auth().onAuthStateChanged((firebaseuser) => {
-            setLoading(true);
+            //setLoading(true);
             setUser(firebaseuser);
             setLoading(false);
         })

@@ -10,10 +10,10 @@ export default function SignUp() {
           );
           const userData = await firebase.auth().createUserWithEmailAndPassword(signup.email, signup.password)
           await userData.user?.updateProfile({displayName: signup.userName})
-          history.push("/");
+          
           }
           catch(e) {
-            throw(e)
+            throw e;
           }
         };
         

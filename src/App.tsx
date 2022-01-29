@@ -33,7 +33,7 @@ function App() {
       <Route exact path="/reduxbasics" component={ReduxBasics} />
       <Route exact path="/websiteui" component={WebsiteReducerUI} />
       <Route exact path="/usersslice" component={SliceUI} />
-      <Route exact path="/hotelsui" component={HotelsUI} />
+      <Route exact path="/HotelsUi" component={HotelsUI} />
       <Route exact path="/hooksui" component={HooksUI} />
 
 
@@ -41,7 +41,7 @@ function App() {
        <Route exact path='/Login' component={Login} />
       <Route exact path='/SignUp' component={SignUp} />
       <Route exact path='/Profile' component={Profile} />
-      <Route exact path='/' render={() => <Redirect to="/hotelsui" />} />
+      <Route exact path='/' render={() => <Redirect to="/HotelsUi" />} />
 
     </switch>
   );

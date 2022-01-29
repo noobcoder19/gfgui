@@ -10,11 +10,11 @@ export default function Login() {
       try{
         
         await firebase.auth().signInWithEmailAndPassword(login.email, login.password);
-        history.push("/");
+        
      
       }
       catch(e){
-          throw(e);
+          throw e;
       }
       };
         return (<Authentication 

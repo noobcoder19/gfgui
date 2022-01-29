@@ -149,6 +149,7 @@ export default function Authentication(props: IProps) {
             helperText={errors.password?.message}
             id="password"
           />
+          <div className={styles.buttons}>
           <FormButtons
             primary={{
               label: "Submit",
@@ -160,7 +161,8 @@ export default function Authentication(props: IProps) {
             }}
             tertiary={props.tertiary}
           />
-          {errorMessage && <Typography variant="h4" className={styles.errormessage} id="errorMessage"> {errorMessage}</Typography>}
+          </div>
+          {errorMessage !== ""? <Typography variant="h4" className={styles.errormessage} id="errorMessage"> {errorMessage}</Typography>: null}
         </form>
         {isLoading && <LoadingSpinner />}
       </div>
