@@ -48,7 +48,7 @@ describe("sign up testing", () => {
         cy.get("#password").type('123456');
         cy.get("#primaryButton").click();
         cy.wait("@submitApi");
-        cy.visit("https://geeksforgeeks-5e259.web.app");
+        //cy.visit("https://geeksforgeeks-5e259.web.app");
         cy.get("#profileButton").click();
         cy.url().should('include','Profile');
     })
