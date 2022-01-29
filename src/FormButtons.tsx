@@ -35,6 +35,7 @@ export default function FormButtons(props: IProps) {
     variant="extended" 
     color="primary" 
     onClick={props.primary.onClick}
+    id="primaryButton"
     className={style.buttonItem}>
         {props.primary.label}
         </Fab>
@@ -43,18 +44,20 @@ export default function FormButtons(props: IProps) {
     onClick={props.secondary.onClick}
     variant="extended" 
     color="secondary" 
-    className={style.buttonItem}>
+    className={style.buttonItem}
+    id="secondaryButton">
         {props.secondary.label}
         </Fab>
     )}
     {props.tertiary && (<Fab 
     onClick={props.tertiary.onClick}
     variant="extended" 
-    className={style.buttonItem}>
+    className={style.buttonItem}
+    id="tertiaryButton">
         {props.tertiary.label}
         </Fab>
     )}
-    <Fab onClick={() => history.push("/HotelsUI")} variant="extended" className={style.buttonItem}>Home</Fab>
+    <Fab onClick={() => history.push("/HotelsUI")} variant="extended" className={style.buttonItem} id="homeButton">Home</Fab>
     </div>
     );
 }

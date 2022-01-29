@@ -109,6 +109,7 @@ export default function Authentication(props: IProps) {
               required={true}
               error={errors && errors.userName?.message ? true : false}
               helperText={errors.userName?.message}
+              id="userName"
             />
           )}
           <TextField
@@ -127,6 +128,7 @@ export default function Authentication(props: IProps) {
             required={true}
             error={errors && errors.email?.message ? true : false}
             helperText={errors.email?.message}
+            id="emailAddress"
           />
           <TextField
             type="password"
@@ -140,6 +142,7 @@ export default function Authentication(props: IProps) {
             error={errors && errors.password?.message ? true : false}
             required={true}
             helperText={errors.password?.message}
+            id="password"
           />
           <FormButtons
             primary={{
@@ -152,7 +155,7 @@ export default function Authentication(props: IProps) {
             }}
             tertiary={props.tertiary}
           />
-          {errorMessage && <Typography variant="h4" className={styles.errormessage}> {errorMessage}</Typography>}
+          {errorMessage && <Typography variant="h4" className={styles.errormessage} id="errorMessage"> {errorMessage}</Typography>}
         </form>
         {isLoading && <LoadingSpinner />}
       </div>
