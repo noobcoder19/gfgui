@@ -4,9 +4,10 @@ import {
   Theme,
   Typography
 } from "@material-ui/core";
-// import { data } from "cypress/types/jquery";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
+import "./App.css";
 import FormButtons, { IButtonItem } from "./FormButtons";
 import LoadingSpinner from "./LoadingSpinner";
 
@@ -17,7 +18,7 @@ const useStyles = makeStyles<Theme, IProps>({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-evenly",
-    height: (props) => (props.height-60)+"px",
+    height: (props) => (props.height - 60) + "px",
   },
 
   outerDiv: {
@@ -32,7 +33,7 @@ const useStyles = makeStyles<Theme, IProps>({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-evenly",
-    height: (props) => (props.height)+"px",
+    height: (props) => (props.height) + "px",
   },
 
   title: {
@@ -62,34 +63,35 @@ export interface IAuthetication {
 interface IProps {
   isUserNameVisible: boolean;
   title: string;
-  height: number;  
+  height: number;
   tertiary: IButtonItem;
   onSubmit: (data: IAuthetication) => void;
 }
 
 export default function Authentication(props: IProps) {
   const styles = useStyles(props);
-  
+  const history = useHistory();
   const {
     register,
     reset,
     handleSubmit,
     formState: { errors },
   } = useForm<IAuthetication>();
- 
+
   const [isLoading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>("");
 
   const onSubmit = async (data: IAuthetication) => {
-    try{
-    setLoading(true);
-    await props.onSubmit(data);
-    setLoading(false);
-  } catch(e: any){
-    setLoading(false);
-    setErrorMessage(e.message);
-  }
-};
+    try {
+      setLoading(true);
+      await props.onSubmit(data);
+      history.push("/");
+      setLoading(false);
+    } catch (e: any) {
+      setLoading(false);
+      setErrorMessage(e.message);
+    }
+  };
   return (
     <div className={styles.outerDiv}>
       <div className={styles.innerDiv}>
