@@ -16,6 +16,7 @@ import Profile from './Profile';
 import ReduxBasics from './ReduxBasics';
 import SignUp from './SignUp';
 import SimpleJest from './SimpleJest';
+import SimpleJestMock from './SimpleJestMock';
 import SliceUI from './SliceUI';
 
 import UsersClass from './UsersClass';
@@ -43,6 +44,7 @@ function App() {
       <Route exact path='/SignUp' component={SignUp} />
       <Route exact path='/Profile' component={Profile} />
       <Route exact path="/SimpleJest" component={SimpleJest} />
+      <Route exact path="/SimpleJestMock" component={SimpleJestMock} />
       <Route exact path='/' render={() => <Redirect to="/HotelsUi" />} />
 
     </switch>
