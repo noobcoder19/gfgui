@@ -24,11 +24,8 @@ cypress-run:
       - uses: cypress-io/github-action@v2
         with:
           browser: chrome
-
   build:
- 
     runs-on: ubuntu-latest
- 
     steps:
     - uses: actions/checkout@v1
     - name: Build
@@ -37,6 +34,5 @@ cypress-run:
         npm run build
     - name: Firebase Deploy
       run: |
-        sudo npm install -g firebase-tools
-        
+        sudo npm install -g firebase-tools  
         firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
