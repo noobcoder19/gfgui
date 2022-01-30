@@ -15,6 +15,7 @@ import MaterialUI from './MaterialUI';
 import Profile from './Profile';
 import ReduxBasics from './ReduxBasics';
 import SignUp from './SignUp';
+import SimpleJest from './SimpleJest';
 import SliceUI from './SliceUI';
 
 import UsersClass from './UsersClass';
@@ -41,6 +42,7 @@ function App() {
        <Route exact path='/Login' component={Login} />
       <Route exact path='/SignUp' component={SignUp} />
       <Route exact path='/Profile' component={Profile} />
+      <Route exact path="/SimpleJest" component={SimpleJest} />
       <Route exact path='/' render={() => <Redirect to="/HotelsUi" />} />
 
     </switch>

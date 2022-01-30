@@ -15,6 +15,16 @@ env:
   REACT_APP_appId: ${{ secrets.REACT_APP_APPID }}
  
 jobs:
+cypress-run:
+    runs-on: ubuntu-20.04
+    # let's make sure our tests pass on Chrome browser
+    name: E2E on Chrome
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cypress-io/github-action@v2
+        with:
+          browser: chrome
+
   build:
  
     runs-on: ubuntu-latest
@@ -28,5 +38,5 @@ jobs:
     - name: Firebase Deploy
       run: |
         sudo npm install -g firebase-tools
-        sudo cypress run
+        
         firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
