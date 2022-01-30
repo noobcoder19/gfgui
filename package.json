@@ -1,6 +1,6 @@
 {
   "name": "geeks",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.4",
@@ -40,6 +40,7 @@
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "e2e": "cypress open",
+    "cytest": "cypress run",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },

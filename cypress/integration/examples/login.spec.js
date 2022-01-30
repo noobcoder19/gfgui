@@ -13,19 +13,18 @@ describe("login page", () => {
         cy.get('#errorMessage').contains("no user record");
     })
     it("For correct credentials", () => {
+        cy.visit("https://geeksforgeeks-5e259.web.app/Login");
         cy.intercept({
             method: "POST",
             pathname: '**/identitytoolkit/v3/relyingparty/verifyPassword'
         }).as('verifyPassword');
-        cy.visit("https://geeksforgeeks-5e259.web.app/Login");
-        // cy.get('#loginButton').click();
         cy.get('#emailAddress').type("test@gmail.com");
         cy.get('#password').type("123456");
         cy.get('#primaryButton').click();
         cy.wait('@verifyPassword');
-        cy.visit("https://geeksforgeeks-5e259.web.app/");
-        cy.get('#Profile').click();
-        cy.get('#emailAddress').contains('test@gmail.com');
+        // cy.visit("https://geeksforgeeks-5e259.web.app/");
+        cy.get('#profileButton').click();
+        cy.url().should('include','Profile');
         
     })
     it("reset button", () => {
