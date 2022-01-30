@@ -20,10 +20,7 @@ cypress-run:
     # let's make sure our tests pass on Chrome browser
     name: E2E on Chrome
     steps:
-      - uses: actions/checkout@v2
-      - uses: cypress-io/github-action@v2
-        with:
-          browser: chrome
+       - uses: cypress-io/github-action@v2.9.7
   build:
     runs-on: ubuntu-latest
     steps:
